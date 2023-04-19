@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pirámide centrada</title>
+</head>
+
+<body>
+    <div id="piramide"></div>
+
+    <script>
+        let niveles = 3; // número de niveles en la pirámide
+        let longitud_base = 2 * niveles - 1; // longitud de la base de la pirámide
+        let mitad_base = Math.floor(longitud_base / 2); // índice de la mitad de la base
+
+        // crear un nuevo elemento div en el documento
+        let piramideDiv = document.createElement('div');
+
+        for (let i = 0; i < niveles; i++) { // bucle exterior para iterar a través de los niveles
+            let linea = ''; // inicializamos la línea actual
+
+            for (let j = 0; j < longitud_base; j++) { // bucle interior para iterar a través de los caracteres de la línea actual
+                if (j >= mitad_base - i && j <= mitad_base + i) { // si estamos en la posición de un 0
+                    linea += '0'; // agregamos un 0 a la línea actual
+                } else {
+                    linea += ' '; // agregamos un espacio a la línea actual
+                }
+            }
+
+            console.log(linea); // imprimimos la línea actual en la consola
+            piramideDiv.innerHTML += linea + "<br>"; // agregamos la línea actual al contenido del elemento div
+        }
+
+        // establecer la propiedad de estilo text-align en el elemento div para centrar su contenido
+        piramideDiv.style.textAlign = 'center';
+
+        // agregar el elemento div al documento
+        document.body.appendChild(piramideDiv);
+        
+        
+
+    </script>
+</body>
+
+</html>

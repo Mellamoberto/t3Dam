@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <script>
-let niveles = 5; // número de niveles en la pirámide
-let piramide = '';
-
-for (let i = 0; i < niveles; i++) { // bucle exterior para iterar a través de los niveles
-  let linea = ''; // variable para almacenar la línea actual de la pirámide
+  <script>
+      let niveles = 5; // número de niveles en la pirámide
+  let piramide = '';
   
-  for (let j = 0; j <= i; j++) { // bucle interior para agregar asteriscos a la línea actual
-    linea += '*';
+  for (let i = 0; i < niveles; i++) { // bucle exterior para iterar a través de los niveles
+    let linea = ''; // variable para almacenar la línea actual de la pirámide
+    
+    for (let j = 0; j <= i; j++) { // bucle interior para agregar asteriscos a la línea actual
+      linea += '*';
+    }
+    
+    piramide += '<p>' + linea + '</p>'; // agregar la línea actual de la pirámide al contenido de la pirámide
   }
   
-  piramide += '<p>' + linea + '</p>'; // agregar la línea actual de la pirámide al contenido de la pirámide
-}
-
-document.getElementById('piramide').innerHTML = piramide; // establecer el contenido del div "piramide" con el contenido generado
-    </script>
+  document.getElementById('piramide').innerHTML = piramide; // establecer el contenido del div "piramide" con el contenido generado
+  </script>
 
 </body>
 
