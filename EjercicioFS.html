@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="EjercicioFS.css">
+
+    <script>
+        function posicion() {
+            let posicion = prompt("Escribe un número del 1 al 5");
+            let color = prompt("Elige el color de la figura: rojo, azul o naranja");
+            piramide(posicion, color);
+        }
+
+        function piramide(posicion, color) {
+            var elemento = document.getElementById("circulo" + posicion);
+            var niveles = 3;
+            var caracteres = "";
+
+
+            elemento.innerHTML = "";
+            if (posicion >= 1 && posicion <= 5) {
+                switch (posicion) {
+                    case '1':
+                        console.log("La posición ingresada es la primera.");
+                        break;
+                    case '2':
+                        console.log("La posición ingresada es la segunda.");
+                        break;
+                    case '3':
+                        console.log("La posición ingresada es la tercera.");
+                        break;
+                    case '4':
+                        console.log("La posición ingresada es la cuarta.");
+                        break;
+                    case '5':
+                        console.log("La posición ingresada es la quinta.");
+                        break;
+                    default:
+                        console.log("Error: La posición ingresada no es válida.");
+                        break;
+                }
+
+
+            elemento.innerHTML = "";
+            switch (color) {
+                case "rojo":
+                    elemento.style.backgroundColor = "red";
+                    break;
+                case "azul":
+                    elemento.style.backgroundColor = "lightblue";
+                    break;
+                case "naranja":
+                    elemento.style.backgroundColor = "orange";
+                    break;
+                default:
+                    alert("El color ingresado no es válido");
+            }
+
+            for (var i = 0; i < niveles; i++) {
+                caracteres += "o";
+                elemento.innerHTML += caracteres + "<br>";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <div class="circulo" id="circulo1">1</div>
+        <div class="circulofinal" id="circulo2">2</div>
+    </div>
+
+
+    <div id="div2">
+        <div class="circulocentro" id="circulo3">3</div>
+    </div>
+
+
+    <div id="div3">
+        <div class="circulo" id="circulo4">4</div>
+        <div class="circulofinal" id="circulo5">5</div>
+    </div>
+
+    <script>
+        posicion();
+        piramide();
+    </script>
+
+</body>
+
+</html>
