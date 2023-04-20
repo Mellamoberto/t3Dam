@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio Flex JS - DAM - Alberto Palomo Pino</title>
     <link rel="stylesheet" href="EjercicioFS.css">
 
     <script>
@@ -18,7 +18,7 @@
         function piramide(posicion, color) {
             var elemento = document.getElementById("circulo" + posicion);
             var niveles = 3;
-            var caracteres = "";
+            var char = "";
 
 
             elemento.innerHTML = "";
@@ -43,6 +43,7 @@
                         console.log("Error: La posición ingresada no es válida.");
                         break;
                 }
+            }
 
 
             elemento.innerHTML = "";
@@ -60,9 +61,22 @@
                     alert("El color ingresado no es válido");
             }
 
-            for (var i = 0; i < niveles; i++) {
-                caracteres += "o";
-                elemento.innerHTML += caracteres + "<br>";
+            for (var i = 0; i <= niveles; i++) {
+                var char = "";
+                if (i == 1 || i == 3) {
+                    for (var j = 1; j <= 2 * i - 1; j++) {
+                        if (j == 1 || j == 2 * i - 1) {
+                            char += "*";
+                        } else {
+                            char += "o";
+                        }
+                    }
+                } else {
+                    for (var j = 1; j <= 2 * i - 1; j++) {
+                        char += "o";
+                    }
+                }
+                elemento.innerHTML += char + "<br>"
             }
         }
     </script>
