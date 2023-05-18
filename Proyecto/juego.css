@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-div {
-    cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/okey.png"), auto;
+* {
+    cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/panenka.png"), auto;
 }
 
 
