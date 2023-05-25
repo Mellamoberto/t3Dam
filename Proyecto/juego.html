@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio Saludos</title>
     <link rel="stylesheet" href="./juego.css">
+    <link rel="stylesheet" href="./index.css">
  
 </head>
 <body>
+    <div id="menu-container"></div>
     <div id="columna">
         <div class="fila" id="fila1">
             <div class="cuadrito" id="c1" onclick="saludar('c1')">C1</div>
@@ -24,6 +26,17 @@
             <div class="cuadrito" id="c5" onclick="saludar('c5')" >C5</div>
         </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Información</h3>
+            <p>Nombre: Alberto Palomo Pino</p>
+            <p>Curso: 1º DAM</p>
+            <p>Tema: Diario de Videojuegos</p>
+        </div>
+    </div>
+    <script src="menu.js"></script>
     <script src="./juego.js"> </script>
 </body>
 </html>

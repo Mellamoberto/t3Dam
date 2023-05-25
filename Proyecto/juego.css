@@ -5,8 +5,10 @@
 }
 
 * {
-    cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/okey.png"), auto;
-}
+    cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/espada.png"), auto;
+    color: black;
+    text-decoration: none;
+  }
 
 
 #columna {
@@ -15,6 +17,10 @@
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
+}
+
+#fila1 {
+    margin-top: 7%;
 }
 
 .fila {

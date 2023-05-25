@@ -1,54 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-    cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/cursor.png"), auto;
+nav.menu {
+  background-color: #ffdda7;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
+button.menu {
+  width: 12vw;
+  height: 10vh;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
-button{
-    width: 10vw;
-    height: 55px;
-    margin-left: 3%;
-    margin-top: 2%;
-    font-size: 70%;
+* {
+  cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/espada.png"), auto;
+  color: black;
+  text-decoration: none;
 }
 
-a {
-    text-decoration: none;
+p.menu {
+  color: black;
 }
-
 
 button:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-  
-  @keyframes shake {
-    10%, 90% {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  background-color: #111;
+}
+
+button:hover a,
+button:hover p {
+  color: goldenrod;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  max-width: 600px;
+}
+
+/* Estilo del botón de cierre */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  10%,
+  90% {
       transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
   }
 
+  20%,
+  80% {
+      transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+      transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+      transform: translate3d(4px, 0, 0);
+  }
+}

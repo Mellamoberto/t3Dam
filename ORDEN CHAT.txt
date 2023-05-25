@@ -1,0 +1,102 @@
+Vamos a empezar de nuevo: quiero que en este menu (menu que esta en archivo llamado menu.js para poder replicar facilmente esta estructura de menus en varias paginas html):
+<body>
+        <nav class="menu">
+            <button class="menu">
+                <a class="menu" href="index.html">Daily-Plays</a>
+            </button>
+
+            <button class="menu">
+                <a class="menu" href="./juego.html" target="_blank">Página para ver un juego</a>
+            </button>
+
+            <button class="menu">
+            <a class="modal-link" href="#" onclick="openModal()">Información Web</a>
+            </button>
+
+
+            <button class="menu">
+                <a class="menu" id="mensaje" href="#">XML</a>
+            </button>
+
+            <button class="menu">
+                <a class="menu" href="./ajustes" target="_blank">Ajustes</a>
+            </button>
+            
+        </nav>
+        <script src="./informacion.js"></script>
+</body>
+
+
+Pues en este menu hay un boton con el texto informacion web. 
+
+Vale. Quiero que al pulsar ese boton salga un modal o panel que muestre esta informacion. Ese modal/panel tiene que abrirse en la misma pagina. ES DECIR: el boton informacion web no me tiene que llevar a ninguna otra pagina, solo me tiene que mostrar ese panel de informacion. Quiero que cuando se pulse ese boton, el panel fondo y demas elementos tengan este estilo:
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    max-width: 600px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+Y para que el boton tenga ese efecto, quiero que me crees un script usando javascript. De momento, antes me has ayudado a hacer este codigo, pero no ha funcionado: 
+document.addEventListener("DOMContentLoaded", function() {
+    const openModalBtn = document.getElementById("openModalBtn");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementsByClassName("close")[0];
+  
+    function openModal() {
+      modal.style.display = "block";
+    }
+  
+    openModalBtn.addEventListener("click", openModal);
+  
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+  });
+
+
+
+Si necesitas mas informacion o algun codigo concreto dimelo. Haz lo que te he dicho y lo repito: QUIERO QUE AL PULSAR EL BOTON INFORMACION SE HAGA UN SCRIPT QUE MUESTRE UN MODAL/PANEL CON LA SIGUIENTE INFORMACION:
+
+<h3>Información</h3>
+            <p>Nombre: Alberto Palomo Pino</p>
+            <p>Curso: 1º DAM</p>
+            <p>Tema: Diario de Videojuegos</p>
