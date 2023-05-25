@@ -7,10 +7,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./informacion.css">
+    <link rel="stylesheet" href="./ajustes.css">
     
 </head>
 <body>
     <div id="menu-container"></div>
+
+    <div id="mainBoxAjustes">
+        <h1>Ajustes</h1>
+
+        <div>
+            <button id="modo-btn">Cambiar Modo</button>
+        </div>
+    
+        <div>
+            <label for="color-selector">Seleccionar color de fuente:</label>
+            <input type="color" id="font-color-selector">
+        </div>
+    
+        <div>
+            <label for="color-selector">Seleccionar color del menú:</label>
+            <input type="color" id="menu-color-selector">
+        </div>
+    </div>
+    
+    
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -24,5 +45,6 @@
 
     <script src="menu.js"></script>
     <script src="modal.js"></script>
+    <script src="./ajustes.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+#mainBoxAjustes {
+    margin-top: 10%;
+}
+
+nav.menu {
+    background-color: #ffdda7;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode nav.menu {
+    background-color: #ffdda7;
+    color: #ff7f00 !important;
+}
+
+.dark-mode .menu a {
+    color: #ff7f00 !important;
+}
+
+.dark-mode .menu a:hover {
+    background-color: #ff7f00;
+    color: #fff;
+}
