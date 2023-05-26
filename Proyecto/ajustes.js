@@ -50,3 +50,32 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.style.backgroundColor = storedMenuColor;
     }
 });
+
+function guardarNombreUsuario() {
+    var usernameInput = document.getElementById("username");
+    var username = usernameInput.value.trim();
+  
+    if (username !== "") {
+      localStorage.setItem("username", username);
+    } else {
+      localStorage.removeItem("username");
+    }
+  
+    actualizarNombreUsuario();
+  }
+  
+  function actualizarNombreUsuario() {
+    var nombreUsuario = localStorage.getItem("username");
+    var nombreUsuarioElement = document.getElementById("nombreUsuario");
+  
+    if (nombreUsuario) {
+      nombreUsuarioElement.textContent = nombreUsuario;
+    } else {
+      nombreUsuarioElement.textContent = "no-usuario";
+    }
+  }
+  
+  // Llamamos a la función para mostrar el nombre de usuario al cargar la página
+  window.onload = function() {
+    actualizarNombreUsuario();
+  };
