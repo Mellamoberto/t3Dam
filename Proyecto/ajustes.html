@@ -30,17 +30,15 @@
             <input type="color" id="menu-color-selector">
         </div>
 
-        <div>
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" placeholder="Introduce tu nombre de usuario">
-            <button onclick="guardarNombreUsuario()">Guardar</button>
-          </div>
-    </div>
+        <form id="loginForm">
+            <input type="text" id="usernameInput" placeholder="Ingresa tu nombre">
+            <button type="submit">Iniciar sesión</button>
+          </form>
 
-
-    <footer>
-        <p>Nombre de usuario: <span id="nombreUsuario">no-usuario</span></p>
-      </footer>
+        <footer>
+            <p><span id="nombreUsuario" class="nombre-usuario"></span></p>
+            <input type="text" id="username" placeholder="Ingresa tu nombre">
+        </footer>
 
     
     

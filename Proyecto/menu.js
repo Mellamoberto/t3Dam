@@ -1,7 +1,6 @@
 const menuContainer = document.getElementById('menu-container');
 
 menuContainer.innerHTML = `
-<body>
 <nav class="menu">
     <button class="menu">
         <a class="menu" href="index.html">Daily-Plays</a>
@@ -24,8 +23,9 @@ menuContainer.innerHTML = `
     </button>
 </nav>
 
-<script src="modal.js"></script>
-</body>
+<footer>
+<p><span id="nombreUsuario" class="nombre-usuario"></span></p>
+</footer>
 `;
 
 document.addEventListener("DOMContentLoaded", function() {

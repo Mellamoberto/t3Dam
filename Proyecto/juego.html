@@ -7,6 +7,7 @@
     <title>Ejercicio Saludos</title>
     <link rel="stylesheet" href="./juego.css">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./ajustes.css">
  
 </head>
 <body>
@@ -28,8 +29,9 @@
     </div>
 
     <footer>
-        <p>Nombre de usuario: <span id="nombreUsuario">no-usuario</span></p>
-      </footer>
+        <p><span id="nombreUsuario" class="nombre-usuario"></span></p>
+        <input type="text" id="username" placeholder="Ingresa tu nombre">
+    </footer>
 
     <div id="modal" class="modal">
         <div class="modal-content">
@@ -42,5 +44,6 @@
     </div>
     <script src="menu.js"></script>
     <script src="./juego.js"> </script>
+    <script src="./ajustes.js"></script>
 </body>
 </html>

@@ -8,27 +8,29 @@
     <title>Indice Proyecto 3 Trimestre - Alberto Palomo Pino</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./informacion.css">
+    <link rel="stylesheet" href="./ajustes.css">
 </head>
 
 <body>
     <div id="menu-container"></div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Información</h3>
-            <p>Nombre: Alberto Palomo Pino</p>
-            <p>Curso: 1º DAM</p>
-            <p>Tema: Diario de Videojuegos</p>
-        </div>
-    </div>
-
     <footer>
-        <p>Nombre de usuario: <span id="nombreUsuario">no-usuario</span></p>
+        <p><span id="nombreUsuario" class="nombre-usuario"></span></p>
       </footer>
 
-    <script src="menu.js"></script>
-    <script src="modal.js"></script>
+      <script src="./menu.js"></script>
+      <script src="./modal.js"></script>
+      <script src="./ajustes.js"></script>
+  
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Información</h3>
+        <p>Nombre: Alberto Palomo Pino</p>
+        <p>Curso: 1º DAM</p>
+        <p>Tema: Diario de Videojuegos</p>
+      </div>
+    </div>
 </body>
 
 </html>
