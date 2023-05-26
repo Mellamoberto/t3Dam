@@ -34,58 +34,46 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     document.addEventListener("DOMContentLoaded", function() {
-        const menuColorSelector = document.getElementById("menu-color-selector");
-        const fontColorSelector = document.getElementById("font-color-selector");
-        if (fontColorSelector) {
-          fontColorSelector.addEventListener("change", function() {
-            const color = fontColorSelector.value;
-            const links = document.querySelectorAll("a");
-        
-            links.forEach(function(link) {
-              link.style.color = color;
-            });
-        
-            // Guardar el color en localStorage
-            localStorage.setItem("fontColor", color);
+        const storedMenuColor = localStorage.getItem("menuColor");
+        const storedFontColor = localStorage.getItem("fontColor");
+      
+        if (storedMenuColor) {
+          const menu = document.querySelector(".menu");
+          menu.style.backgroundColor = storedMenuColor;
+        }
+      
+        if (storedFontColor) {
+          const links = document.querySelectorAll("a");
+          links.forEach(function(link) {
+            link.style.color = storedFontColor;
           });
         }
-        
-          menuColorSelector.addEventListener("change", function() {
-            const color = menuColorSelector.value;
-            const menu = document.querySelector(".menu");
-        
-            menu.style.backgroundColor = color;
-        
-            // Guardar el color en localStorage
-            localStorage.setItem("menuColor", color);
-          });
-        
-          // Recuperar los ajustes guardados en localStorage
-          const storedModo = localStorage.getItem("modo");
-          if (storedModo === "oscuro") {
-            document.body.classList.add("dark-mode");
-          }
-        
-          const storedFontColor = localStorage.getItem("fontColor");
-          if (storedFontColor) {
-            fontColorSelector.value = storedFontColor;
-        
-            const links = document.querySelectorAll("a");
-        
-            links.forEach(function(link) {
-              link.style.color = storedFontColor;
-            });
-          }
-        
-          const storedMenuColor = localStorage.getItem("menuColor");
-          if (storedMenuColor) {
-            menuColorSelector.value = storedMenuColor;
-        
-            const menu = document.querySelector(".menu");
-        
-            menu.style.backgroundColor = storedMenuColor;
-          }
+      
+        const menuColorSelector = document.getElementById("menu-color-selector");
+        const fontColorSelector = document.getElementById("font-color-selector");
+      
+        menuColorSelector.addEventListener("change", function() {
+          const color = menuColorSelector.value;
+          const menu = document.querySelector(".menu");
+      
+          menu.style.backgroundColor = color;
+      
+          // Guardar el color en localStorage
+          localStorage.setItem("menuColor", color);
         });
+      
+        fontColorSelector.addEventListener("change", function() {
+          const color = fontColorSelector.value;
+          const links = document.querySelectorAll("a");
+      
+          links.forEach(function(link) {
+            link.style.color = color;
+          });
+      
+          // Guardar el color en localStorage
+          localStorage.setItem("fontColor", color);
+        });
+      });
 
 
 
