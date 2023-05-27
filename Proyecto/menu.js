@@ -2,30 +2,28 @@ const menuContainer = document.getElementById('menu-container');
 
 menuContainer.innerHTML = `
 <nav class="menu">
-    <button class="menu">
-        <a class="menu" href="index.html">Daily-Plays</a>
-    </button>
+<button class="menu">
+    <a class="menu" href="index.html">Daily-Plays</a>
+</button>
 
-    <button class="menu">
-        <a class="menu" href="./juego.html" target="_blank">Página para ver un juego</a>
-    </button>
+<button class="menu">
+    <a class="menu" href="./juego.html" target="_blank">Página para ver un juego</a>
+</button>
 
-    <button class="menu">
-    <a class="modal-link" href="#">Información Web</a>
-    </button>
+<button class="menu">
+<a class="modal-link" href="#">Información Web</a>
+</button>
 
-    <button class="menu">
-        <a class="menu" id="mensaje" href="#">XML</a>
-    </button>
+<button class="menu">
+    <a class="menu" id="mensaje" href="#">XML</a>
+</button>
 
-    <button class="menu">
-        <a class="menu" href="./ajustes.html">Ajustes</a>
-    </button>
+<button class="menu">
+    <a class="menu" href="./ajustes.html">Ajustes</a>
+</button>
 </nav>
 
-<footer>
-<p><span id="nombreUsuario" class="nombre-usuario"></span></p>
-</footer>
+<div id="user-display"></div>
 `;
 
 document.addEventListener("DOMContentLoaded", function() {

@@ -16,32 +16,32 @@
 
     <div id="mainBoxAjustes">
         <h1>Ajustes</h1>
-
-        <div>
-            <button id="modo-btn">Cambiar Modo</button>
-        </div>
+    
+        <button id="modo-btn">Alternar Modo Oscuro</button>
     
         <div>
-            <label for="color-selector">Seleccionar color de fuente:</label>
+            <label for="font-color-selector">Seleccionar color de fuente:</label>
             <input type="color" id="font-color-selector">
         </div>
     
         <div>
-            <label for="color-selector">Seleccionar color del menú:</label>
+            <label for="menu-color-selector">Seleccionar color del menú:</label>
             <input type="color" id="menu-color-selector">
         </div>
-
-        <form id="loginForm">
-            <input type="text" id="usernameInput" placeholder="Ingresa tu nombre">
-            <button type="submit">Iniciar sesión</button>
-          </form>
-
-        <footer>
-            <p><span id="nombreUsuario" class="nombre-usuario"></span></p>
-            <input type="text" id="username" placeholder="Ingresa tu nombre">
-        </footer>
-
     
+        <form onsubmit="saveUserName(); return false;">
+            <input type="text" id="user-name-input" placeholder="Ingresa tu nombre">
+            <button type="submit">Guardar</button>
+        </form>
+    
+        <button id="restaurar-btn">Restaurar valores por defecto</button>
+    
+        <form onsubmit="cargarAjustes(); return false;">
+            <input type="text" id="cargar-input" placeholder="Ingresa el usuario que quieres cargar">
+            <button type="submit">Cargar</button>
+        </form>
+    </div>
+
     
 
     <div id="modal" class="modal">
@@ -58,5 +58,6 @@
     <script src="./juego.js"> </script>
     <script src="./ajustes.js"></script>
     <script src="./informacion.js"></script>
+
 </body>
 </html>
