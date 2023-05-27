@@ -37,6 +37,18 @@ button.menu {
 }
 */
 
+.mando {
+  margin-bottom: 200px;
+  margin-right: 300px;
+  position: relative;
+}
+
+.mando img {
+  position: absolute;
+  width: 200px; /* Tamaño deseado para el ancho */
+  height: 200px;
+}
+
 p.menu {
   color: black;
 }
@@ -55,6 +67,95 @@ p.menu {
 footer input[type="text"] {
   display: none;
 }
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  width: 33.33%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 135px;
+}
+
+.listaMejoresJuegos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+h1 {
+  margin-right: 10px;
+}
+
+.image-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Impide que se rompa en múltiples filas */
+}
+
+.image-list li {
+  flex-basis: calc(33.33% - 20px); /* Ajusta el ancho de cada imagen */
+  margin-right: 20px; /* Aumenta el margen entre las imágenes */
+  text-align: center;
+}
+
+.image-container {
+  width: 100%;
+  padding-bottom: 100%; /* Establece una relación de aspecto cuadrada para las imágenes */
+  position: relative;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container .rating {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 45px; /* Ajusta el tamaño del rating */
+  text-align: center;
+  transform: translate(50%, calc(100% + 10px)); /* Desplaza el rating hacia abajo y hacia la izquierda */
+}
+
+.juegosActuales {
+  margin-top: 85px; /* Ajusta el margen superior de la segunda lista */
+}
+
+.daily-plays-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 111.4vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.daily-plays {
+  font-size: 300%; /* Ajusta el tamaño del texto según tus preferencias */
+  font-weight: bold;
+  width: 20vw;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff; /* Color del texto */
+  background-color: #ff0000; /* Color de fondo */
+  padding: 20px; /* Espacio interno */
+  margin-right: 20px; /* Margen derecho para separarlo del contenido principal */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  line-height: 1.2; /* Espaciado entre líneas */
+  margin-left: 20%;
+}
+
+
 
 #nombreUsuario {
   position: fixed;

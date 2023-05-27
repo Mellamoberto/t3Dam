@@ -2,10 +2,21 @@ document.addEventListener("DOMContentLoaded", function() {
   const modoBtn = document.getElementById("modo-btn");
   modoBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode");
+    cambiarImagen();
     guardarModo();
   });
 
   cargarModo();
+
+  function cambiarImagen() {
+    const logoImage = document.getElementById("logo");
+
+    if (document.body.classList.contains("dark-mode")) {
+      logoImage.src = "./img/mandoblanco.png"; // Ruta de la imagen en modo oscuro
+    } else {
+      logoImage.src = "./img/mando.png"; // Ruta de la imagen en modo claro
+    }
+  }
 
   function guardarModo() {
     const modo = document.body.classList.contains("dark-mode") ? "oscuro" : "claro";
@@ -19,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
       if (modoGuardado === "oscuro") {
         document.body.classList.add("dark-mode");
+        cambiarImagen(); // Cambiar la imagen al cargar en modo oscuro
       }
     }
   }

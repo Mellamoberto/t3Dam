@@ -4,11 +4,22 @@ body {
 }
 
 #mainBoxAjustes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 50px;
     margin-top: 10%;
+}
+
+#mainBoxAjustes > * {
+    margin-bottom: 20px; /* Agrega espacio vertical entre los elementos */
 }
 
 nav.menu {
     background-color: #ffdda7;
+    margin-right: 20px; /* Margen hacia la derecha */
+    padding: 10px; /* Aumentar el tamaño */
+    margin-bottom: 10px; /* Separación entre elementos */
 }
 
 .dark-mode {
@@ -37,7 +48,7 @@ footer {
     background-color: #f2f2f2;
     padding: 10px;
     font-size: 16px;
-  }
+}
 
   footer input[type="text"] {
     display: none;

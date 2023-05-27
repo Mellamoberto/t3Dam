@@ -2,6 +2,10 @@ const menuContainer = document.getElementById('menu-container');
 
 menuContainer.innerHTML = `
 <nav class="menu">
+<div class="mando">
+<img id="logo" src="./img/mando.png" alt="logo">
+</div>
+
 <button class="menu">
     <a class="menu" href="index.html">Daily-Plays</a>
 </button>
