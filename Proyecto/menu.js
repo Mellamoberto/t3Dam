@@ -1,3 +1,7 @@
+/*Este script es el que forma el menú, y es colocado en todas las 
+páginas para que el menú salga en la parte superior de la misma manera
+siempre */
+
 const menuContainer = document.getElementById('menu-container');
 
 menuContainer.innerHTML = `
@@ -11,7 +15,11 @@ menuContainer.innerHTML = `
 </button>
 
 <button class="menu">
-    <a class="menu" href="./juego.html" target="_blank">Página para ver un juego</a>
+    <a class="menu" href="./juego.html">Página para ver un juego</a>
+</button>
+
+<button class="menu">
+    <a class="menu" href="./juegoAleatorio.html">Elige NextVideogame</a>
 </button>
 
 <button class="menu">
@@ -55,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+/*Esta funcion provoca un alert cuando se intenta buscar un videojuego
+en la barra de busqueda que esta al final del menú */
 function buscarVideojuego() {
     const searchTerm = document.getElementById("search-input").value;
     if (searchTerm.trim() !== "") {
@@ -63,6 +72,7 @@ function buscarVideojuego() {
     }
 }
 
+/*Permite usar la barra de busqueda anterior tambien pulsando la tecla enter */
 function handleKeyPress(event) {
     if (event.keyCode === 13) {
         buscarVideojuego();
@@ -81,3 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
       userDisplay.textContent = 'Sin identificar';
     }
   });
+
+
+  /*Este codigo permite clicar y ver el boton XML que hay en el menú, y muestra
+  el ejercicio de XML y XSL */
+  const button = document.getElementById("mensaje");
+  button.addEventListener("click", cargarPaginaXML);
+
+  function cargarPaginaXML() {
+    const url = "https://mellamoberto.github.io/EjercicioXML/XML/VinoTinto.xml";
+    window.open(url, "_blank");
+
+    document.body.appendChild(iframe);
+  }

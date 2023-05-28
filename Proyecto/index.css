@@ -31,12 +31,6 @@ button.menu {
   border-radius: 50%;
 }
 
-/*
-* {
-  cursor: url("https://mellamoberto.github.io/t3Dam/Proyecto/img/espada.png"), auto;
-}
-*/
-
 .mando {
   margin-bottom: 200px;
   margin-right: 300px;
@@ -45,7 +39,7 @@ button.menu {
 
 .mando img {
   position: absolute;
-  width: 200px; /* Tamaño deseado para el ancho */
+  width: 200px; 
   height: 200px;
 }
 
@@ -103,14 +97,14 @@ h1 {
 }
 
 .listaDeImagenes li {
-  flex-basis: calc(33.33% - 20px); /* Ajusta el ancho de cada imagen */
-  margin-bottom: 20px; /* Aumenta el margen entre las filas de imágenes */
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px; 
   text-align: center;
 }
 
 .contenedor-imagen {
   width: 100%;
-  padding-bottom: 100%; /* Establece una relación de aspecto cuadrada para las imágenes */
+  padding-bottom: 100%;
   position: relative;
 }
 
@@ -126,9 +120,9 @@ h1 {
   bottom: 0;
   right: 0;
   font-weight: bold;
-  font-size: 45px; /* Ajusta el tamaño del rating */
+  font-size: 45px;
   text-align: center;
-  transform: translate(50%, calc(100% + 10px)); /* Desplaza el rating hacia abajo y hacia la izquierda */
+  transform: translate(50%, calc(100% + 10px)); 
 }
 
 .juegosActuales {
@@ -140,30 +134,30 @@ h1 {
   position: fixed;
   top: 55vh;
   left: 0;
-  height: 1vh; /* Ajusta la altura según tus preferencias */
+  height: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .daily-plays {
-  font-size: 2.6vw; /* Ajusta el tamaño del texto según tus preferencias */
+  font-size: 2.6vw;
   font-weight: bold;
   width: 15vw;
   text-transform: uppercase;
   text-align: center;
-  color: #ffffff; /* Color del texto */
-  background-color: #ff0000; /* Color de fondo */
-  padding: 20px; /* Espacio interno */
-  margin: 20px; /* Margen para separarlo del contenido principal */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
-  line-height: 1.2; /* Espaciado entre líneas */
+  color: #ffffff; 
+  background-color: #ff0000; 
+  padding: 20px; 
+  margin: 20px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+  line-height: 1.2;
 }
 
 aside {
   position: fixed;
   top: 20%;
-  right: 60px; /* Ajustar la distancia al borde derecho según sea necesario */
+  right: 60px;
  
 }
 
@@ -171,7 +165,7 @@ aside {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 100px; /* Ajustar el margen superior según sea necesario */
+  margin-top: 100px;
 }
 
 .recuadro-azul {
@@ -196,10 +190,10 @@ aside {
   padding: 20px;
   border: none;
   width: 100%;
-  font-size: 55px; /* Ajustar el tamaño de fuente según sea necesario */
-  box-sizing: border-box; /* Incluir el padding en el ancho del input */
+  font-size: 55px; 
+  box-sizing: border-box; 
   display: inline-block;
-  text-align: center; /* Centrar el número dentro del input */
+  text-align: center; 
 }
 
 .recuadro-verde input[type="number"] {
@@ -208,13 +202,11 @@ aside {
   padding: 20px;
   border: none;
   width: 100%;
-  font-size: 55px; /* Ajustar el tamaño de fuente según sea necesario */
-  box-sizing: border-box; /* Incluir el padding en el ancho del input */
+  font-size: 55px; 
+  box-sizing: border-box; 
   display: inline-block;
-  text-align: center; /* Centrar el número dentro del input */
+  text-align: center; 
 }
-
-
 
 #nombreUsuario {
   position: fixed;
@@ -287,7 +279,6 @@ button:hover p {
   font-size: 16px;
 }
 
-/*Botón para cerrar el modal */
 .close {
   color: #aaa;
   float: right;

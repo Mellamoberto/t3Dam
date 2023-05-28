@@ -29,14 +29,14 @@ body {
 }
 
 #mainBoxAjustes > * {
-    margin-bottom: 20px; /* Agrega espacio vertical entre los elementos */
+    margin-bottom: 20px;
 }
 
 nav.menu {
     background-color: #ffdda7;
-    margin-right: 20px; /* Margen hacia la derecha */
-    padding: 10px; /* Aumentar el tamaño */
-    margin-bottom: 10px; /* Separación entre elementos */
+    margin-right: 20px;
+    padding: 10px; 
+    margin-bottom: 10px; 
 }
 
 .dark-mode {

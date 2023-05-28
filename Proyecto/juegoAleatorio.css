@@ -1,0 +1,52 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #h1Generador {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #genero-aleatorio {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .roulette {
+    position: relative;
+    margin-top: 50px;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  #generos-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-1500px);
+    }
+  }

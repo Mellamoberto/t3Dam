@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<!--Proyecto Final Lenguaje de Marcas
+Autor: Alberto Palomo Pino
+Cenec - Curso: 2022/2023-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +21,7 @@
         <div id="menu-container"></div>
     </header>
     <main>
+      <!--div donde se forma el rotulo que sale a la derecha -->
         <div class="div-Rotulo">
             <h1 class="daily-plays">
                 D<br>
@@ -33,6 +38,8 @@
             </h1>
         </div>
 
+        <!--Esto son las dos listas de videojuegos que salen en el centro
+        de la pantalla, con sus imagenes, titulo/encabezado y una puntuación/rating -->
         <div class="listaMejoresJuegos">
             <h1>Mejores juegos de 2023</h1>
         </div>
@@ -56,6 +63,7 @@
                 </div>
             </li>
         </ul>
+
 
         <div class="juegosActuales">
             <h1>Ultimos juegos añadidos</h1>
@@ -83,7 +91,10 @@
         </ul>
     </main>
 
-    
+
+    <!-- Parte lateral de la pantalla. Son dos recuadros para apuntar
+    (dentro de la página ajustes) el número de juegos que quieres jugar este año 
+    y el número que ya has jugado. Una especie de meta anual-->
     <aside>
         <div class="objetivo-2023">
             <div class="recuadro-azul">
@@ -106,6 +117,8 @@
     <script src="./ajustes.js"></script>
     <script src="./informacion.js"></script>
 
+
+      <!--Texto que aparece al clicar en el boton del menú "Información Web" -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -139,6 +152,8 @@
         </div>
     </div>
 
+    <!--Este script carga y muestra los numeros de juegos que quieres jugar y los
+    que ya has jugado, extrayendola del localStorage -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
           const userName = localStorage.getItem('userName');
@@ -176,7 +191,8 @@
         }
       </script>
 
-
+<!--Este script carga y muestra el nombre de usuario almacenado en el localStorage
+y cargar los ajustes personalizados asociados al usuario.-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
     const userName = localStorage.getItem('userName');

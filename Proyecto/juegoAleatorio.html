@@ -5,81 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./ajustes.css">
+    <link rel="stylesheet" href="./juego.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./informacion.css">
-    
-    
+    <link rel="stylesheet" href="./ajustes.css">
+    <link rel="stylesheet" href="./juego.css">
 </head>
 <body>
-    <div id="menu-container"></div>
+    <header>
+        <div id="menu-container"></div>
+    </header>
 
-    <div id="mainBoxAjustes">
-        <h1>Ajustes</h1>
-        <!--Boton para meter el usuario-->
-        <input type="text" id="user-name-input" placeholder="Ingresa tu nombre">
-
-        <!--Boton para cambiar entre el modo oscuro y el claro -->
-        <button id="modo-btn">Alternar Modo Oscuro</button>
-
-        <!--Selector de color para las letras del menu (la de dentro de los botones) -->
-        <div>
-            <label for="font-color-selector">Seleccionar color de fuente:</label>
-            <input type="color" id="font-color-selector">
-        </div>
-    
-        <!--Selector de color del propio menu -->
-        <div>
-            <label for="menu-color-selector">Seleccionar color del menú:</label>
-            <input type="color" id="menu-color-selector">
-        </div>
-
-        <!--Div que contiene los dos recuadros para poner el numero de juegos que quieres jugar al año
-        y los que ya llevas jugados. Solo acepta numeros -->
-        <div class="numeroDeJuegos">
-            <div>
-              <input type="number" id="juegos-objetivo">
-            </div>
-            <p>Este año quieres jugar <span id="juegos-objetivo-texto">0</span> juegos</p>
+    <main>
+        <div class="container">
+          <h1 id="h1Generador">Generador Aleatorio de Géneros de Videojuegos</h1>
+          <div class="roulette">
+            <ul id="generos-list"></ul>
+            <button id="generar-btn">Generar Género Aleatorio</button>
           </div>
-          
-          <div class="numeroDeJuegos">
-            <div>
-              <input type="number" id="juegos-jugados">
-            </div>
-            <p>Llevas jugados <span id="juegos-jugados-texto">0</span> juegos</p>
-          </div>
+          <h2 id="genero-aleatorio"></h2>
+        </div>
+      </main>
 
-
-          <!--Boton para guardar todos los ajustes de un usuario. Simula un inicio de sesión-->
-        <form onsubmit="saveUserName(); return false;">
-            <button type="submit">Guardar</button>
-        </form>
-
-        <!--Botón que restablece los valores de la página a los valores por defecto. Cierra "la sesión"
-        del usuario -->
-        <button id="restaurar-btn">Restaurar valores por defecto</button>
-    
-
-        <!--Carga los ajustes establecidos por cada "usuario". Hay que escribir el mismo nombre y 
-        pulsar el botón cargar -->
-        <form onsubmit="cargarAjustesPersonalizados(); return false;">
-            <input type="text" id="cargar-input" placeholder="Ingresa el usuario que quieres cargar">
-            <button id="cargar-btn" type="button">Cargar</button>
-        </form>
-
-    </div>
-
-    
-
-    <!--Texto que aparece al clicar en el boton del menú "Información Web" -->
-    <div id="modal" class="modal">
+      <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3>Información</h3>
-            <p>Nombre: Alberto Palomo Pino</p>
-            <p>Curso: 1º DAM</p>
-            <p>Tema: Diario de Videojuegos</p>
             <p>Explicación de la página: </p> 
             <p id="exp">- El <span class="destacarPalabra">primer boton Daily-Plays</span>  es la página de inicio. Es una muestra
             sencilla de lo que sería el diario de videojuegos, mostrando un par de
@@ -106,16 +57,15 @@
             <p><span class="destacarPalabra">También hay un cuadro de texto que funciona como cuadro de búsqueda</span>. Escribe algún juego
                 y dale a buscar (o pulsa la tecla enter directamente). Saltará una alert.
             </p>
-                  
-            
         </div>
     </div>
+
+
     
-
-    <script src="./menu.js"></script>
-    <script src="./juego.js"> </script>
-    <script src="./ajustes.js"></script>
-    <script src="./informacion.js"></script>
-
+      <script src="./menu.js"></script>
+      <script src="./juego.js"> </script>
+      <script src="./ajustes.js"></script>
+      <script src="./informacion.js"></script>
+      <script src="./juegoAleatorio.js"></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
 
+/*Este codigo se encarga de abrir y cerrar el modal/panel de información
+cuando se hace clic en los botones indicados */
 document.addEventListener("DOMContentLoaded", function() {
     const openModalBtn = document.querySelector(".modal-link");
     const modal = document.getElementById("modal");
