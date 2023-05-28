@@ -47,3 +47,11 @@ footer {
   footer input[type="text"] {
     display: none;
   }
+
+  #exp {
+    padding-left: 30px;
+  }
+
+  .destacarPalabra {
+    color: darkgoldenrod;
+  }
