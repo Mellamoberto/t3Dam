@@ -40,6 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+function guardarJuegosJugadosYDeseados(userName) {
+  const juegosJugadosInput = document.getElementById('juegos-jugados-input');
+  const juegosDeseadosInput = document.getElementById('juegos-deseados-input');
+
+  const juegosJugados = parseInt(juegosJugadosInput.value);
+  const juegosDeseados = parseInt(juegosDeseadosInput.value);
+
+  localStorage.setItem(`${userName}-juegosJugados`, juegosJugados);
+  localStorage.setItem(`${userName}-juegosDeseados`, juegosDeseados);
+}
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const storedMenuColor = localStorage.getItem("menuColor");
   const storedFontColor = localStorage.getItem("fontColor");
@@ -92,7 +109,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const juegosJugadosInput = document.getElementById('juegos-jugados');
+  const juegosDeseadosInput = document.getElementById('juegos-objetivo');
 
+  const juegosJugados = localStorage.getItem('juegosJugados');
+  const juegosDeseados = localStorage.getItem('juegosDeseados');
+
+  if (juegosJugados && juegosDeseados) {
+    juegosJugadosInput.value = juegosJugados;
+    juegosDeseadosInput.value = juegosDeseados;
+  }
+
+  const userName = localStorage.getItem('userName');
+  const userDisplay = document.getElementById('user-display');
+
+  if (userName) {
+    userDisplay.textContent = `Usuario: ${userName}`;
+    cargarAjustesPersonalizados(userName);
+  } else {
+    userDisplay.textContent = 'Sin identificar';
+  }
+});
+
+
+
+function guardarNumeroJuegos(userName) {
+  const juegosJugadosInput = document.getElementById('juegos-jugados');
+  const juegosDeseadosInput = document.getElementById('juegos-objetivo');
+
+  const juegosJugados = parseInt(juegosJugadosInput.value);
+  const juegosDeseados = parseInt(juegosDeseadosInput.value);
+
+  localStorage.setItem(`${userName}-juegosJugados`, juegosJugados);
+  localStorage.setItem(`${userName}-juegosDeseados`, juegosDeseados);
+}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -100,12 +151,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const userDisplay = document.getElementById('user-display');
 
   if (userName) {
-    userDisplay.textContent = `¡Hola, ${userName}!`;
+    userDisplay.textContent = `Usuario: ${userName}`;
     cargarAjustesPersonalizados(userName);
+    cargarNumeroJuegos(userName);
+    cargarNumeroJuegosVerde(userName);
   } else {
     userDisplay.textContent = 'Sin identificar';
   }
 });
+
+
 
 function saveUserName() {
   const userNameInput = document.getElementById('user-name-input');
@@ -114,10 +169,16 @@ function saveUserName() {
   localStorage.setItem('userName', userName);
 
   const userDisplay = document.getElementById('user-display');
-  userDisplay.textContent = `¡Hola, ${userName}!`;
+  userDisplay.textContent = `Usuario: ${userName}`;
 
   guardarAjustesPersonalizados(userName);
+  guardarNumeroJuegos(userName);
+  guardarNumeroJuegosVerde(userName);
 }
+
+
+
+
 
 function guardarAjustesPersonalizados(userName) {
   const modo = document.body.classList.contains("dark-mode") ? "oscuro" : "claro";
@@ -172,24 +233,21 @@ function eliminarAjustesPersonalizados(userName) {
 
 
 
-
 function cargarAjustes() {
   const cargarInput = document.getElementById('cargar-input');
   const userName = cargarInput.value.trim(); // Eliminar espacios en blanco al inicio y al final del nombre
   const userDisplay = document.getElementById('user-display');
 
   if (userName) {
-    userDisplay.textContent = `¡Hola, ${userName}!`;
+    userDisplay.textContent = `Usuario: ${userName}`;
     cargarAjustesPersonalizados(userName);
+    guardarNombreUsuario(userName); // Guardar el nombre de usuario en localStorage
     cargarInput.classList.remove('error'); // Remover la clase de error si existía previamente
   } else {
     cargarInput.classList.add('error');
     userDisplay.textContent = 'Sin identificar';
   }
 }
-
-const cargarBtn = document.getElementById('cargar-btn');
-cargarBtn.addEventListener('click', cargarAjustes);
 
 function cargarAjustesPersonalizados(userName) {
   const modoGuardado = localStorage.getItem(`${userName}-modo`);
@@ -198,6 +256,7 @@ function cargarAjustesPersonalizados(userName) {
 
   if (modoGuardado === "oscuro") {
     document.body.classList.add("dark-mode");
+    cambiarImagen();
   } else {
     document.body.classList.remove("dark-mode");
   }
@@ -210,6 +269,37 @@ function cargarAjustesPersonalizados(userName) {
     link.style.color = fontColorGuardado;
   });
 }
+
+
+
+function cambiarImagen() {
+  const logoImage = document.getElementById("logo");
+
+  if (document.body.classList.contains("dark-mode")) {
+    logoImage.src = "./img/mandoblanco.png"; // Ruta de la imagen en modo oscuro
+  } else {
+    logoImage.src = "./img/mando.png"; // Ruta de la imagen en modo claro
+  }
+}
+
+function guardarNombreUsuario(userName) {
+  localStorage.setItem('userName', userName);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const userName = localStorage.getItem('userName');
+  const userDisplay = document.getElementById('user-display');
+
+  if (userName) {
+    userDisplay.textContent = `Usuario: ${userName}`;
+    cargarAjustesPersonalizados(userName);
+  } else {
+    userDisplay.textContent = 'Sin identificar';
+  }
+});
+
+const cargarBtn = document.getElementById('cargar-btn');
+cargarBtn.addEventListener('click', cargarAjustes);
 
 
 

@@ -3,6 +3,23 @@ body {
     color: #000;
 }
 
+.numeroDeJuegos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .numeroDeJuegos > div {
+    background-color: #ffdda7;
+    padding: 10px;
+    margin-right: 20px;
+  }
+  
+  .numeroDeJuegos p {
+    margin-top: 10px;
+  }
+
 #mainBoxAjustes {
     display: flex;
     flex-direction: column;
@@ -29,16 +46,31 @@ nav.menu {
 
 .dark-mode nav.menu {
     background-color: #ffdda7;
-    color: #ff7f00 !important;
+    color: #ff7f00;
 }
 
-.dark-mode .menu a {
-    color: #ff7f00 !important;
+.dark-mode .menu button:hover {
+    background-color: whitesmoke;
+    color: black;
 }
 
-.dark-mode .menu a:hover {
-    background-color: #ff7f00;
+.dark-mode #modal {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .modal-content {
+    background-color: #222;
     color: #fff;
+    border: 1px solid #888;
+}
+
+.dark-mode .close {
+    color: #ccc;
+}
+
+.dark-mode .close:hover,
+.dark-mode .close:focus {
+    color: white;
 }
 
 footer {

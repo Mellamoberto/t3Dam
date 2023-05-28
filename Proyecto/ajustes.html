@@ -29,6 +29,20 @@
             <label for="menu-color-selector">Seleccionar color del menú:</label>
             <input type="color" id="menu-color-selector">
         </div>
+
+        <div class="numeroDeJuegos">
+            <div>
+              <input type="number" id="juegos-objetivo">
+            </div>
+            <p>Este año quieres jugar <span id="juegos-objetivo-texto">0</span> juegos</p>
+          </div>
+          
+          <div class="numeroDeJuegos">
+            <div>
+              <input type="number" id="juegos-jugados">
+            </div>
+            <p>Llevas jugados <span id="juegos-jugados-texto">0</span> juegos</p>
+          </div>
     
         <form onsubmit="saveUserName(); return false;">
             <button type="submit">Guardar</button>
@@ -36,10 +50,12 @@
     
         <button id="restaurar-btn">Restaurar valores por defecto</button>
     
-        <form onsubmit="cargarAjustes(); return false;">
+        <form onsubmit="cargarAjustesPersonalizados(); return false;">
             <input type="text" id="cargar-input" placeholder="Ingresa el usuario que quieres cargar">
-            <button type="submit">Cargar</button>
+            <button id="cargar-btn" type="button">Cargar</button>
         </form>
+
+
     </div>
 
     

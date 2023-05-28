@@ -89,7 +89,7 @@ h1 {
   margin-right: 10px;
 }
 
-.image-list {
+.listaDeImagenes {
   list-style: none;
   padding: 0;
   display: flex;
@@ -97,26 +97,26 @@ h1 {
   flex-wrap: nowrap; /* Impide que se rompa en múltiples filas */
 }
 
-.image-list li {
+.listaDeImagenes li {
   flex-basis: calc(33.33% - 20px); /* Ajusta el ancho de cada imagen */
   margin-right: 20px; /* Aumenta el margen entre las imágenes */
   text-align: center;
 }
 
-.image-container {
+.contenedor-imagen {
   width: 100%;
   padding-bottom: 100%; /* Establece una relación de aspecto cuadrada para las imágenes */
   position: relative;
 }
 
-.image-container img {
+.contenedor-imagen img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.image-container .rating {
+.contenedor-imagen .rating {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -127,10 +127,10 @@ h1 {
 }
 
 .juegosActuales {
-  margin-top: 85px; /* Ajusta el margen superior de la segunda lista */
+  margin-top: 85px;
 }
 
-.daily-plays-container {
+.div-Rotulo {
   position: fixed;
   top: 0;
   left: 0;
@@ -153,6 +153,58 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
   line-height: 1.2; /* Espaciado entre líneas */
   margin-left: 20%;
+}
+
+aside {
+  position: fixed;
+  top: 20%;
+  right: 60px; /* Ajustar la distancia al borde derecho según sea necesario */
+ 
+}
+
+.objetivo-2023 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 100px; /* Ajustar el margen superior según sea necesario */
+}
+
+.recuadro-azul {
+  background-color: lightblue;
+  padding: 10px;
+  height: 20%;
+  width: 31.5%;
+}
+
+.recuadro-verde {
+  background-color: lightgreen;
+  padding: 10px;
+  height: 20%;
+  width: 31.5%;
+}
+
+.recuadro-azul input[type="number"] {
+  background-color: lightblue;
+  color: white;
+  padding: 20px;
+  border: none;
+  width: 100%;
+  font-size: 55px; /* Ajustar el tamaño de fuente según sea necesario */
+  box-sizing: border-box; /* Incluir el padding en el ancho del input */
+  display: inline-block;
+  text-align: center; /* Centrar el número dentro del input */
+}
+
+.recuadro-verde input[type="number"] {
+  background-color: lightgreen;
+  color: white;
+  padding: 20px;
+  border: none;
+  width: 100%;
+  font-size: 55px; /* Ajustar el tamaño de fuente según sea necesario */
+  box-sizing: border-box; /* Incluir el padding en el ancho del input */
+  display: inline-block;
+  text-align: center; /* Centrar el número dentro del input */
 }
 
 
@@ -199,7 +251,36 @@ button:hover p {
   max-width: 600px;
 }
 
-/* Estilo del botón de cierre */
+.barraDeBusqueda {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.barraDeBusqueda input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.barraDeBusqueda input[type="submit"] {
+  background-color: #ff7f00;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/*Botón para cerrar el modal */
 .close {
   color: #aaa;
   float: right;

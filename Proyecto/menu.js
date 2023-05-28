@@ -25,7 +25,14 @@ menuContainer.innerHTML = `
 <button class="menu">
     <a class="menu" href="./ajustes.html">Ajustes</a>
 </button>
+
+<div class="barraDeBusqueda">
+<input type="text" id="search-input" placeholder="¿Qué videojuego buscas?" onkeypress="handleKeyPress(event)">
+<input type="submit" value="Buscar" onclick="buscarVideojuego()">
+</div>
 </nav>
+
+
 
 <div id="user-display"></div>
 `;
@@ -46,3 +53,31 @@ document.addEventListener("DOMContentLoaded", function() {
     openModalBtn.addEventListener("click", openModal);
     closeBtn.addEventListener("click", closeModal);
 });
+
+
+
+function buscarVideojuego() {
+    const searchTerm = document.getElementById("search-input").value;
+    if (searchTerm.trim() !== "") {
+        alert("Aún no se pueden buscar videojuegos. ¡Perdón por las molestias!");
+    }
+}
+
+function handleKeyPress(event) {
+    if (event.keyCode === 13) {
+        buscarVideojuego();
+        event.preventDefault();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const userName = localStorage.getItem('userName');
+    const userDisplay = document.getElementById('user-display');
+  
+    if (userName) {
+      userDisplay.textContent = `Usuario: ${userName}`;
+      cargarAjustesPersonalizados(userName);
+    } else {
+      userDisplay.textContent = 'Sin identificar';
+    }
+  });

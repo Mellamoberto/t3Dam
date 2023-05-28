@@ -17,40 +17,40 @@
         <div id="menu-container"></div>
     </header>
     <main>
-        <div class="daily-plays-container">
+        <div class="div-Rotulo">
             <h1 class="daily-plays">
-              D<br>
-              a<br>
-              i<br>
-              l<br>
-              y<br>
-              -<br>
-              P<br>
-              l<br>
-              a<br>
-              y<br>
-              s
+                D<br>
+                a<br>
+                i<br>
+                l<br>
+                y<br>
+                -<br>
+                P<br>
+                l<br>
+                a<br>
+                y<br>
+                s
             </h1>
-          </div>
+        </div>
 
         <div class="listaMejoresJuegos">
             <h1>Mejores juegos de 2023</h1>
         </div>
-        <ul class="image-list">
+        <ul class="listaDeImagenes">
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/zelda.jpg" alt="Zelda Tears of the Kingdom">
                     <span class="rating">80</span>
                 </div>
             </li>
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/RE4.jpg" alt="Resident Evil 4 Remake">
                     <span class="rating">90</span>
                 </div>
             </li>
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/hifirush.jpg" alt="Hi-Fi Rush">
                     <span class="rating">95</span>
                 </div>
@@ -61,27 +61,44 @@
             <h1>Tus Juegos Actuales</h1>
         </div>
 
-        <ul class="image-list">
+        <ul class="listaDeImagenes">
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/zelda.jpg" alt="Zelda Tears of the Kingdom">
                     <span class="rating">80</span>
                 </div>
             </li>
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/RE4.jpg" alt="Resident Evil 4 Remake">
                     <span class="rating">90</span>
                 </div>
             </li>
             <li>
-                <div class="image-container">
+                <div class="contenedor-imagen">
                     <img src="./img/hifirush.jpg" alt="Hi-Fi Rush">
                     <span class="rating">95</span>
                 </div>
             </li>
         </ul>
     </main>
+
+    
+    <aside>
+        <div class="objetivo-2023">
+            <div class="recuadro-azul">
+              <input type="number" id="numero-juegos" placeholder="">
+            </div>
+            <p>Este año quieres jugar <span id="juegos-jugados">0</span> juegos</p>
+          </div>
+
+          <div class="objetivo-2023">
+            <div class="recuadro-verde">
+              <input type="number" id="numero-juegos-verde" placeholder="">
+            </div>
+            <p>Llevas jugados <span id="juegos-jugados-verde">0</span> juegos</p>
+          </div>
+    </aside>
 
 
     <script src="./menu.js"></script>
@@ -98,6 +115,58 @@
             <p>Tema: Diario de Videojuegos</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const userName = localStorage.getItem('userName');
+          if (userName) {
+            cargarNumeroJuegos(userName);
+            cargarNumeroJuegosVerde(userName);
+          }
+        });
+      
+        function cargarNumeroJuegos(userName) {
+          const juegosDeseados = localStorage.getItem(`${userName}-juegosDeseados`);
+          if (juegosDeseados) {
+            const juegosDeseadosInput = document.getElementById("numero-juegos");
+            juegosDeseadosInput.value = juegosDeseados;
+            const juegosDeseadosTexto = document.getElementById("juegos-jugados");
+            juegosDeseadosTexto.textContent = juegosDeseados;
+          }
+      
+          const juegosJugados = localStorage.getItem(`${userName}-juegosJugados`);
+          if (juegosJugados) {
+            const juegosJugadosVerde = document.getElementById("juegos-jugados-verde");
+            juegosJugadosVerde.textContent = juegosJugados;
+          }
+        }
+      
+        function cargarNumeroJuegosVerde(userName) {
+          const juegosJugados = localStorage.getItem(`${userName}-juegosJugados`);
+          if (juegosJugados) {
+            const inputVerde = document.getElementById("numero-juegos-verde");
+            const juegosJugadosVerde = document.getElementById("juegos-jugados-verde");
+      
+            inputVerde.value = juegosJugados;
+            juegosJugadosVerde.textContent = juegosJugados;
+          }
+        }
+      </script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const userName = localStorage.getItem('userName');
+    const userDisplay = document.getElementById('user-display');
+  
+    if (userName) {
+      userDisplay.textContent = `Usuario: ${userName}`;
+      cargarAjustesPersonalizados(userName);
+    } else {
+      userDisplay.textContent = 'Sin identificar';
+    }
+  });
+</script>
 </body>
 
 </html>
